@@ -1,6 +1,10 @@
 import React from "react";
 import Header from "../Header/Hearder";
 
+
+const API_KEY = '9eac7e06a6b320e47fe2dde7d5dd104d';
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}';
+
 const Main = () =>
 {
     return(
