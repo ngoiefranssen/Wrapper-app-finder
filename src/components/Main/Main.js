@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../Header/Hearder";
 import axios from "axios";
+import Header from "../Header/Hearder";
 
 
 const API_KEY = '9eac7e06a6b320e47fe2dde7d5dd104d';
 // lat(liverpool)
-const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=${API_KEY}`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=Liverpool&appid=${API_KEY}`;
 
 const Main = () => {
     return (
