@@ -1,12 +1,12 @@
 import React from "react";
 
 const Header = () => {
-    
-    return(
+
+     return(
         <div className="header">
-            <h1 className="header_title">Forecast Finder</h1>
+            <h1 className="header__title">Forecast Finder</h1>
         </div>
     );
-};
+}
 
 export default Header;
