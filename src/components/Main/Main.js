@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import axios from "axios";
 import Header from "../Header/Hearder";
 import Content from "../Context/Content";
+import WeatherSearch from '../WeatherSearch/WeatherSearch'
 
 
 const API_KEY = '9eac7e06a6b320e47fe2dde7d5dd104d';
@@ -25,7 +26,7 @@ const Main = () => {
         <div className="main">
             <Header />
             <Content>
-                
+                <WeatherSearch />
             </Content>
         </div>
     );
