@@ -10,7 +10,9 @@ const Main = () => {
     const  api_cal = async () =>
     {
         const urlData = `https://api.openweathermap.org/data/2.5/weather?q=Liverpool&appid=${API_KEY}`;
+        const resquestDadta = axios.get(urlData);
 
+        const reponseData = await resquestDadta;
     }
     return (
         <div className="main">
