@@ -4,10 +4,14 @@ import Header from "../Header/Hearder";
 
 
 const API_KEY = '9eac7e06a6b320e47fe2dde7d5dd104d';
-// lat(liverpool)
-const url = `https://api.openweathermap.org/data/2.5/weather?q=Liverpool&appid=${API_KEY}`;
+
 
 const Main = () => {
+    const  api_cal = async () =>
+    {
+        const urlData = `https://api.openweathermap.org/data/2.5/weather?q=Liverpool&appid=${API_KEY}`;
+
+    }
     return (
         <div className="main">
             <Header />
