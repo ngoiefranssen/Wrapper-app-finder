@@ -12,7 +12,6 @@ const Main = () => {
         
         const urlData = `https://api.openweathermap.org/data/2.5/weather?q=Liverpool&appid=${API_KEY}`;
         const resquestDadta = axios.get(urlData);
-
         const responseData = await resquestDadta;
         console.log(responseData)
     };
