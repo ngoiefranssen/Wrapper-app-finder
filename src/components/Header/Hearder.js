@@ -4,7 +4,7 @@ const Header = () => {
 
      return(
         <div className="header">
-            <h1 className="header__title">Forecast Finder</h1>
+            <h1 className="header__title">Outil de recherche de prévisions</h1>
         </div>
     );
 }
