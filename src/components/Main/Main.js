@@ -1,31 +1,43 @@
-import React, {useEffect} from "react";
+import React, {useState} from "react";
 import axios from "axios";
+import Context from "../../Context/Context";
 import Header from "../Header/Hearder";
-import Content from "../Context/Content";
-import WeatherSearch from '../WeatherSearch/WeatherSearch'
-
-
-const API_KEY = '9eac7e06a6b320e47fe2dde7d5dd104d';
+import Content from "../Content/Content";
+import WeatherSearch from '../WeatherSearch/WeatherSearch';
+import WeatherData from "../WeatherSearch/WeatherData";
 
 const Main = () => {
 
-    const  api_data = async () =>{
-        
-        const urlData = `https://api.openweathermap.org/data/2.5/weather?q=Liverpool&appid=${API_KEY}`;
+    const [weather, setWeather] = useState();
+
+    const  api_data = async e =>{
+
+        e.preventDefault();
+
+        const API_KEY = '9eac7e06a6b320e47fe2dde7d5dd104d';
+        const urlData = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric`;
+       
         const resquestDadta = axios.get(urlData);
         const responseData = await resquestDadta;
-        console.log(responseData)
+
+        setWeather(responseData.data.main);
+
     };
 
-    useEffect(() =>{
-        api_data();
-    }, []);
+   weather && console.log(weather);
+
+    // useEffect(() =>{
+    //     api_data();
+    // }, []);
 
     return (
         <div className="main">
             <Header />
             <Content>
-                <WeatherSearch />
+                <Context.Provider value={{ api_data, weather }}>
+                    <WeatherSearch />
+                    { weather && <WeatherData/> }
+                </Context.Provider>
             </Content>
         </div>
     );

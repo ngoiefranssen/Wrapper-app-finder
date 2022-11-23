@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useContext} from "react";
+import Context from "../../Context/Context";
+
 
 const WeatherSearch = () =>{
 
+    const{api_data} = useContext(Context);
+
     return(
         <div className="weather-search">
-            <form className="weather-search__form">
+            <form onSubmit={api_data} className="weather-search__form">
                 <input autoComplete="off" className="weather-search__input" type="text"/>
                 <div className="weather-search__submit">
                     <button className="weather-search__button">&rarr;</button>
