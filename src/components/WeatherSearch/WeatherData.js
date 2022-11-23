@@ -5,11 +5,11 @@ const WeatherData = () =>{
 
     const{weather, city} = useContext(Context);
 
-    const {temp, humidity, prossure} = weather;
+    const {temp, humidity, pressure} = weather;
     
     return(
         <div className="weather-data">
-            <p className="weather__tagline">Weather forecast for <span className="weather-data__city">{city}</span></p>
+            <p className="weather__tagline">Prévisions météo pour <span className="weather-data__city">{city}</span></p>
             <div className="weather-data__box">
                 <span className="weather-data__property">
                     <p className="weather-data__title">Temperature</p>
@@ -21,7 +21,7 @@ const WeatherData = () =>{
                 </span>
                 <span className="weather-data__property">
                     <p className="weather-data__title">Pressure</p>
-                    <p className="weather-data__value">{prossure}</p>
+                    <p className="weather-data__value">{pressure}</p>
                 </span>
             </div>
         </div>
