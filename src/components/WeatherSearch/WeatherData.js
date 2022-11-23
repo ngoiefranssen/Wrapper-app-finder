@@ -3,7 +3,6 @@ import Context from "../../Context/Context";
 
 const WeatherData = () =>{
 
-
     const{weather} = useContext(Context);
 
     const {temp, humidity, prossure} = weather;

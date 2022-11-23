@@ -17,8 +17,8 @@ const Main = () => {
         const API_KEY = '9eac7e06a6b320e47fe2dde7d5dd104d';
         const urlData = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric`;
        
-        const resquestDadta = axios.get(urlData);
-        const responseData = await resquestDadta;
+        const resquestData = axios.get(urlData);
+        const responseData = await resquestData;
 
         setWeather(responseData.data.main);
 
